@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Hoja Reset para quitar estilos por defecto que tiene el navegador-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!--Fuente | Tipografía | Externa-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <!--Hoja de estilos CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body id="oradoresBody">
+    <!--HEADER ##Menú-Barra de navegación + Logo-->
+    <header class="contenedor-header" id="header">
+        <!--Nav de Bootstrap-->
+            <nav class="navbar navbar-expand-lg bg-nav barranav">
+                <div class="container-fluid">
+                    <div class="contenedor-nav">
+                        <img class="logo" src="../images/codoacodo.png" alt="Logo Codo a Codo">
+                        <h1 class="tituloLogo">Conf Bs As</h1>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active menu-gris texto " id="conferenciaNav"  aria-current="page" href="../index.html">La conferencia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active menu-gris texto seleccionado" id="oradoresNav" aria-current="page" href="#oradores">Los oradores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active menu-gris texto" id="lugarNav"  aria-current="page" href="../index.html">El lugar y la fecha</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active menu-gris texto" id="serOradorNav" aria-current="page" href="../index.html">Conviértete en orador</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active comprar-verde" id="tickets" aria-current="page" href="/pages/comprartickets.html">Comprar tickets</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <ul class="dropdown-menu menu">
+                                    <li><a class="dropdown-item" href="#">La conferencia</a></li>
+                                    <li><a class="dropdown-item" href="#oradores">Los oradores</a></li>
+                                    <li><a class="dropdown-item" href="#">El lugar y la fecha</a></li>
+                                    <li><a class="dropdown-item" href="#conviertete-orador">Conviértete en orador</a></li>
+                                    <li><a class="dropdown-item" href="./pages/comprartickets.html">Comprar tickets</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </header>
+    <main class="oradoresMain">
+
+        <div id="carouselExample" class="carousel slide banner-contenedor" data-bs-ride="carousel">
+            <div class="carousel-inner ">
+                <div class="carousel-item active banner-filtro">
+                    <img src="../images/conferencia.jpg" class="d-block w-100" id="imgEncabezado" alt="Buenos Aires Edicio y Árboles, Calle">
+                </div>
+                <div class="carousel-item banner-filtro">
+                    <img src="../images/conferencia2.jpeg" class="d-block w-100" id="imgEncabezado" alt="Edificio BS As">
+                </div>
+                <div class="carousel-item banner-filtro">
+                    <img src="../images/conferencia3.png" class="d-block w-100" id="imgEncabezado" alt="BS AS Obelisco">
+                </div>
+            </div>
+            <div class="banner-texto card-img-overlay d-flex flex-column gap-4 justify-content-center text-end">
+                <h5 class="card-title">LOS ORADORES</h5>
+                <p class="card-text">
+                    Conocé a los oradores que participarán en la Conferencia de Buenos Aires. A continuación obtendrás información sobre la fecha, el horario y el tema que tratara cada orador. ¡No te pierdas la conferencia!
+    
+                </p>
+                <div class="botones-card-banner">
+                    <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+                    <button type="button" class="btn btn-comprar" onclick="location.href='./pages/comprartickets.html'"target="_self"
+                        id="boton-enviar">
+                        Comprar tickets
+                    </button>
+                </div>
+            </div>
+         </div>
+
+        </div>
+        <div class="oradores">
+            <div class="table-responsive  tabla">
+                <table class="table table-striped" id="tableContainer" >
+                    <thead class="table-light tableHeader">
+                        <tr>
+                            <th scope="col"> ID </th>
+                            <th scope="col"> ORADOR </th>
+                            <th scope="col"> FECHA </th>
+                            <th scope="col"> HORA </th>
+                            <th scope="col"> TEMA </th>
+                            </tr>
+                    </thead>
+                    <tbody class="table-info tableBody ">
+                        <tr>
+                            <td>001</td>
+        
+                            <td>Bill Gates</td>
+        
+                            <td>10/12/23</td>
+        
+                            <td>17HS</td>
+                            
+                            <td>
+                                <img class="iconoTema" src="../images/react.jpg" alt="">
+                                
+                                <img class="iconoTema" src="../images/JavaScript-logo.png" alt="">
+                                </td>
+                        </tr>
+        
+                        <tr>
+                            <td>002</td>
+        
+                            <td>Steve Jobs</td>
+        
+                            <td>11/12/23</td>
+        
+                            <td>14HS</td>
+                            
+                            <td>
+                                <img class="iconoTema" src="../images/react.jpg" alt="">
+                                
+                                <img class="iconoTema" src="../images/JavaScript-logo.png" alt="">
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+        
+                            <td>Steve Jobs</td>
+        
+                            <td>11/12/23</td>
+                            
+                            <td>17HS</td>
+        
+                            <td>
+                                <img class="iconoTema" src="../images/react.jpg" alt="">
+                                
+                                <img class="iconoTema" src="../images/JavaScript-logo.png" alt="">
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+        
+                            <td>Steve Jobs</td>
+        
+                            <td>11/12/23</td>
+                            
+                            <td>14HS</td>
+                            
+                            <td>
+                                <img class="iconoTema" src="../images/react.jpg" alt="">
+                                
+                                <img class="iconoTema" src="../images/JavaScript-logo.png" alt="">
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+        
+                            <td>Steve Jobs</td>
+        
+                            <td>11/12/23</td>
+                            
+                            <td>14HS</td>
+                            
+                            <td>
+                                <img class="iconoTema" src="../images/react.jpg" alt="">
+                                
+                                <img class="iconoTema" src="../images/JavaScript-logo.png" alt="">
+                                </td>
+                        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="btn btn-success buttonOrador">Quiero ser orador</button>        
+        </div>
+        
+    </main> 
+    <footer class="footer" id="footerOradores">
+        <nav class="map-sitio">
+            <ul class="submenu">
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Prensa</a></li>
+                <li><a href="#">Conferencias</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Estudiantes</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="/scripts/navBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+    </body>
+  </html>
